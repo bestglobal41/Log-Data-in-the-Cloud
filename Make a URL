@@ -1,0 +1,10 @@
+dataObject = CloudPut[{}]
+updateObject = CloudDeploy[APIFunction[{"data" -> "Number"},
+   (CloudPut[Append[CloudGet[dataObject], #data], dataObject];
+     ListLinePlot[CloudGet[dataObject]]) &, "GIF"]]
+     CloudDeploy[APIFunction[{},
+  (CloudPut[{}, dataObject];
+    ListLinePlot[CloudGet[dataObject]]) &, "GIF"]]
+     CloudDeploy[APIFunction[{},
+  (CloudPut[{}, dataObject];
+    ListLinePlot[CloudGet[dataObject]]) &, "GIF"]]
